@@ -5,56 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hasil Kelulusan - SDN 01 MUNJUL</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      padding: 20px;
-      color: white;
       background: url('WhatsApp Image 2025-05-23 at 14.43.38.jpeg') no-repeat center center fixed;
       background-size: cover;
       position: relative;
+      color: white;
     }
 
-    /* Lapisan biru transparan agar teks tetap terbaca */
+    /* Lapisan biru transparan */
     body::before {
       content: "";
       position: fixed;
       top: 0; left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 123, 255, 0.5);
+      background: rgba(0, 0, 50, 0.5);
+      backdrop-filter: blur(5px);
       z-index: -1;
     }
 
     .container {
-      background: white;
-      color: black;
-      padding: 30px 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(15px);
+      border-radius: 15px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+      padding: 40px 30px;
       text-align: center;
-      max-width: 500px;
-      width: 100%;
+      max-width: 400px;
+      width: 90%;
+      border: 1px solid rgba(255, 255, 255, 0.3);
     }
 
     h2 {
-      margin-bottom: 10px;
-      font-size: 1.5em;
+      margin-bottom: 20px;
+      font-size: 1.8em;
+      color: #ffffff;
     }
 
     p {
       font-size: 1.1em;
-      margin: 10px 0;
+      margin: 12px 0;
+      color: #f1f1f1;
     }
 
     .status {
-      font-size: 1.2em;
+      font-size: 1.3em;
       font-weight: bold;
-      color: green;
+      color: #00e676; /* hijau terang */
+      background: rgba(0, 0, 0, 0.2);
+      padding: 6px 12px;
+      border-radius: 8px;
+      display: inline-block;
+      margin-top: 10px;
     }
   </style>
 </head>
@@ -62,7 +74,8 @@
   <div class="container">
     <h2>Hasil Kelulusan</h2>
     <p><strong>Nama:</strong> Budi Santoso</p>
-    <p><strong>Status Kelulusan:</strong> <span class="status">LULUS</span></p>
+    <p><strong>Status Kelulusan:</strong></p>
+    <span class="status">LULUS</span>
   </div>
 </body>
 </html>
