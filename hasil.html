@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hasil Kelulusan</title>
+</head>
+<body>
+    <h2>Hasil Kelulusan</h2>
+    <div id="hasil">Memuat...</div>
+
+    <script>
+        async function ambilHasil() {
+            const params = new URLSearchParams(window.location.search);
+            const nisn = params.get("nisn");
+            const pass = params.get("pass");
+
+            const hasil = document.getElementById("hasil");
+
+            try {
+                const res = await fetch("data_siswa.json");
+                const data = await res.json();
+
+                if (data[nisn] && data[nisn].password === pass) {
+                    const siswa = data[nisn];
+                    hasil.innerHTML = `
+                        <p>Nama: <strong>${siswa.nama}</strong></p>
+                        <p>Status Kelulusan: <strong>${siswa.status}</strong></p>
+                    `;
+                } else {
+                    hasil.innerHTML = `<p style="color:red;">NISN atau Password salah.</p>`;
+                }
+            } catch (e) {
+                hasil.innerHTML = `<p style="color:red;">Gagal mengambil data.</p>`;
+            }
+        }
+
+        ambilHasil();
+    </script>
+</body>
+</html>

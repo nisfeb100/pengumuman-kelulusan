@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Kelulusan</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #007BFF;
+            color: white;
+            text-align: center;
+            margin-top: 100px;
+        }
+        .login-box {
+            background: white;
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        input {
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+        }
+        button {
+            padding: 10px 20px;
+            background: orange;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>PENGUMUMAN KELULUSAN</h2>
+    <h3>SD NEGERI 01 MERDEKA</h3>
+    <div class="login-box">
+        <input type="text" id="nisn" placeholder="Masukkan NISN" required><br>
+        <input type="password" id="password" placeholder="Masukkan Password" required><br>
+        <button onclick="login()">CEK KELULUSAN</button>
+    </div>
+
+    <script>
+        function login() {
+            const nisn = document.getElementById("nisn").value;
+            const password = document.getElementById("password").value;
+            window.location.href = `hasil.html?nisn=${nisn}&pass=${password}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+
+{
+    "1234567890": {
+        "nama": "Budi Santoso",
+        "status": "LULUS",
+        "password": "budi123"
+    },
+    "0987654321": {
+        "nama": "Siti Aminah",
+        "status": "TIDAK LULUS",
+        "password": "siti321"
+    }
+}
