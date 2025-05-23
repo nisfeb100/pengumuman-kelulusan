@@ -1,45 +1,68 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>Hasil Kelulusan - SDN MUNJUL 01</title>
-    <style>
-        body {
-            background-color: #007BFF;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            color: white;
-        }
-        .container {
-            background: white;
-            color: black;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            max-width: 600px;
-            width: 90%;
-        }
-        h2 {
-            margin-bottom: 10px;
-        }
-        .status {
-            font-size: 1.2em;
-            margin-top: 20px;
-            font-weight: bold;
-            color: green;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hasil Kelulusan - SDN 01 MUNJUL</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      color: white;
+      background: url('WhatsApp Image 2025-05-23 at 14.43.38.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+    }
+
+    /* Lapisan biru transparan agar teks tetap terbaca */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 123, 255, 0.5);
+      z-index: -1;
+    }
+
+    .container {
+      background: white;
+      color: black;
+      padding: 30px 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      max-width: 500px;
+      width: 100%;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      font-size: 1.5em;
+    }
+
+    p {
+      font-size: 1.1em;
+      margin: 10px 0;
+    }
+
+    .status {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: green;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h2>Hasil Kelulusan</h2>
-        <h3>BUDI SANTOSO</h3>
-        <p>Selamat! Anda <span class="status">LULUS</span>.</p>
-    </div>
+  <div class="container">
+    <h2>Hasil Kelulusan</h2>
+    <p><strong>Nama:</strong> Budi Santoso</p>
+    <p><strong>Status Kelulusan:</strong> <span class="status">LULUS</span></p>
+  </div>
 </body>
 </html>
